@@ -1,2 +1,2 @@
 # experimental-searchkit
-Ex
+One Page App using searchkit and Elastic Search
