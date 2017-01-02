@@ -8,7 +8,8 @@ import {
   Hits, HitsStats, NoHits, Pagination, SortingSelector,
   SelectedFilters, ResetFilters, ItemHistogramList,
   Layout, LayoutBody, LayoutResults, TopBar,
-  SideBar, ActionBar, ActionBarRow
+  SideBar, ActionBar, ActionBarRow,
+  MultiMatchQuery
 } from "searchkit";
 
 require("./index.scss");
@@ -28,7 +29,13 @@ export class SearchPage extends Component {
             <SearchBox
               searchOnChange={true}
               placeholder="Search drinks..."
-              prefixQueryFields={["name^1","_all"]}
+              queryBuilder={(key) => {
+                return MultiMatchQuery(key, {
+                  type: "phrase_prefix",
+                  fields: ["name.eng^5", "_all"],
+                  operator: "or"
+                })
+              }}
             />
           </TopBar>
           <LayoutBody>
@@ -42,7 +49,7 @@ export class SearchPage extends Component {
                 id="categories"
                 title="Categories"
                 field="category"
-                operator="AND"
+                operator="OR"
                 size={10}/>
             </SideBar>
             <LayoutResults>
