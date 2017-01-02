@@ -17,7 +17,7 @@ require("./index.scss");
 const url = "https://sandbox-8663525960.us-west-2.bonsaisearch.net/db/bubble_teas"
 
 const searchkit = new SearchkitManager(url, {
-  basicAuth: ""
+  basicAuth: "2x18m366cq:jba4qq7cwl"
 })
 
 export class SearchPage extends Component {
