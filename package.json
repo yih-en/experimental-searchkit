@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node start.js",
     "build": "rm -rf dist; webpack --config webpack.prod.config.js -p",
-    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
+    "heroku-postbuild": "webpack -p --config webpack.prod.config.js --progress"
   },
   "authors": [
     {
