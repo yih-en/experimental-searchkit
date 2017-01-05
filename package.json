@@ -4,12 +4,11 @@
   "description": "Example single page app for Searchkit",
   "engines": {
     "node": "6.2.2",
-    "npm": "3.9.5"
+    "npm": "3.9.x"
   },
   "scripts": {
     "start": "node start.js",
-    "build": "rm -rf dist; webpack --config webpack.prod.config.js -p",
-    "heroku-postbuild": "webpack -p --config webpack.prod.config.js --progress"
+    "build": "rm -rf dist; webpack --config webpack.prod.config.js -p"
   },
   "authors": [
     {
