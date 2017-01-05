@@ -2,6 +2,10 @@
   "name": "experimental-searchkit",
   "version": "0.1.1",
   "description": "Example single page app for Searchkit",
+  "engines": {
+    "node": "6.2.2",
+    "npm": "3.9.5"
+  },
   "scripts": {
     "start": "node start.js",
     "build": "rm -rf dist; webpack --config webpack.prod.config.js -p",
