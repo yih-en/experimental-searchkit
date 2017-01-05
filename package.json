@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node start.js",
-    "heroku-postbuild": "webpack -p --config webpack.prod.config.js --p"
+    "build": "webpack --config webpack.prod.config.js --p",
+    "postinstall": "npm install"
   },
   "authors": [
     {
